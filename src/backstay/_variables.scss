@@ -1,0 +1,37 @@
+$web-font-url: 'https://fonts.googleapis.com/css?family=Andika:400,700&display=swap' !default;
+$web-font: Andika !default;
+
+// UI
+$body-bg: #f9f5f2 !default;
+$body-color: #212529 !default;
+$font-size-base: (14/16) * 1rem !default;
+$font-family-sans-serif: $web-font, sans-serif !default;
+
+$btn-border-radius: 0.5rem !default;
+
+// COLORS
+$blue: #078fee !default;
+$green: #30b643 !default;
+$red: #ed534e !default;
+$orange: #f57400 !default;
+$purple: #815de6 !default;
+$yellow: #ffd400 !default;
+
+$primary: $yellow !default;
+$secondary: $blue !default;
+$info: $purple !default;
+$warning: $orange !default;
+
+// Slightly darker yellow for link.
+$link-color: darken($yellow, 3%) !default;
+
+// ALERT
+$alert-padding-x: 1rem !default;
+$alert-border-level: -5 !default;
+
+// BADGE
+$badge-padding-y: 0.5em !default;
+$badge-padding-x: 0.75em !default;
+$badge-font-weight: normal !default;
+
+@import '../before';

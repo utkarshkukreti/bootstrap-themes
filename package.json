@@ -1,0 +1,41 @@
+{
+  "name": "bootstrap-themes",
+  "version": "1.0.0",
+  "files": [
+    "/dist/**/*.css",
+    "!/dist/{dev,prod}/**/*",
+    "/src/**/*.scss",
+    "!/src/_/*",
+    "!/src/index.scss"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/utkarshkukreti/bootstrap-themes",
+  "author": "Utkarsh Kukreti <utkarshkukreti@gmail.com> (https://utkar.sh)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/utkarshkukreti/bootstrap-themes"
+  },
+  "scripts": {
+    "start": "parcel -d .cache/dev src/index.pug",
+    "build": "yarn clean && yarn build:rake && yarn build:preview",
+    "build:rake": "rake",
+    "build:preview": "parcel build --no-cache --no-source-maps -d dist/prod src/index.pug",
+    "deploy": "yarn build && netlifyctl deploy -P dist/prod",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "clipboard-polyfill": "^2.8.1",
+    "cssnano": "^4.1.10",
+    "highlight.js": "^9.15.8",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "parcel-bundler": "^1.12.3",
+    "popper.js": "^1.15.0",
+    "postcss-cli": "^6.1.3",
+    "pug": "^2.0.4"
+  }
+}

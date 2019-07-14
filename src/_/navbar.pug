@@ -1,0 +1,22 @@
+mixin nav(brand, id, klass)
+  .snippet
+    nav.navbar.navbar-expand-sm(class=klass).mb-3
+      a.navbar-brand(href='#') Brand
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target=`#${id}`, aria-controls=id, aria-expanded='false', aria-label='Toggle Navigation')
+        span.navbar-toggler-icon
+      .collapse.navbar-collapse(id=id)
+        .navbar-nav
+          a.nav-item.nav-link.active(href='#')
+            | Home
+            span.sr-only (current)
+          a.nav-item.nav-link(href='#') Documentation
+          a.nav-item.nav-link(href='#') Examples
+          a.nav-item.nav-link(href='#') Blog
+        .navbar-nav.ml-auto
+          a.nav-item.nav-link(href='#') Contact Us
+
+.d-flex.flex-column.mb-3
+  for color, index in colors
+    if isAlmostInvisibleOnBackground(color)
+      - continue
+    +nav(color.name, `navbar-${index}`, `navbar-${isLight(color) ? 'light' : 'dark'} bg-${color.class}`)

@@ -1,0 +1,45 @@
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.snippet {
+  position: relative;
+  .toggle {
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    left: calc(100% - 1px);
+    transform: rotate(90deg);
+    @media (min-width: 576px) {
+      top: 0;
+      left: calc(100% + 10px);
+      transform: none;
+    }
+    svg {
+      display: block;
+    }
+  }
+}
+
+#code {
+  textarea {
+    white-space: pre;
+    font-size: 0.8rem;
+  }
+  .modal-body {
+    padding: 0;
+  }
+  .modal-footer {
+    border: none;
+    background: #e9e9e9;
+  }
+  pre {
+    margin: 0;
+  }
+  code {
+    padding: 1rem 1.5rem;
+    max-height: calc(100vh - 12rem);
+  }
+}

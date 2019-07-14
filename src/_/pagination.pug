@@ -1,0 +1,21 @@
+.snippet
+  .d-flex.justify-content-center
+    nav(aria-label='Pagination')
+      ul.pagination
+        li.page-item.disabled
+          a.page-link(href='#' aria-disabled="true") Previous
+        for i in [1, 2, 3, 4, 5]
+          li.page-item(class=i === 3 ? 'active' : '')
+            a.page-link(href='#')= i
+        li.page-item
+          a.page-link(href='#') Next
+        
+.snippet
+  .d-flex.justify-content-center
+    nav(aria-label='Pagination')
+      ul.pagination
+        li.page-item
+          a.page-link(href='#') Previous
+        li.mx-3.align-self-center.text-muted Page 4 of 4
+        li.page-item.disabled
+          a.page-link(href='#' aria-disabled="true") Next

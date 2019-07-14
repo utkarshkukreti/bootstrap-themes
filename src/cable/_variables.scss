@@ -1,0 +1,34 @@
+$web-font-url: 'https://fonts.googleapis.com/css?family=Karla:400,700&display=swap' !default;
+$web-font: Karla !default;
+
+// UI
+$body-bg: #1d2937 !default;
+$body-color: #f7f7f7 !default;
+$font-size-base: (15/16) * 1rem !default;
+$font-family-sans-serif: $web-font, sans-serif !default;
+
+$border-radius: 0.1rem !default;
+
+// COLORS
+$blue: #078fee !default;
+$green: #30b643 !default;
+$red: #ed534e !default;
+$orange: #f57400 !default;
+$purple: #815de6 !default;
+
+$primary: $blue !default;
+$secondary: #404346 !default;
+$info: $purple !default;
+$warning: $orange !default;
+
+// ALERT
+$alert-bg-level: 0 !default;
+$alert-border-level: 0 !default;
+$alert-color-level: -12 !default;
+
+// BADGE
+$badge-padding-y: 0.5em !default;
+$badge-padding-x: 0.75em !default;
+$badge-font-weight: normal !default;
+
+@import '../before';

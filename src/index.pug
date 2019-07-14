@@ -1,0 +1,26 @@
+extends layout
+
+block head
+  title Free Bootstrap Themes by Bootstrap-Themes.com
+  link(rel="stylesheet" href="index.scss")
+
+block body
+  include ./nav
+  .container.mt-4
+    h1.h3.text-center Free Bootstrap Themes
+    .h5.text-center.text-muted.mb-4 Open Source, MIT Licensed,#[br]Customizable Themes for Bootstrap 4.
+    .d-flex.justify-content-center.mb-3
+      .mr-1
+        a.github-button(href='https://github.com/utkarshkukreti/bootstrap-themes/subscription', data-icon='octicon-eye', data-size='large', data-show-count='true', aria-label='Watch utkarshkukreti/bootstrap-themes on GitHub') Watch
+      div
+        a.github-button(href='https://github.com/utkarshkukreti/bootstrap-themes', data-icon='octicon-star', data-size='large', data-show-count='true', aria-label='Star utkarshkukreti/bootstrap-themes on GitHub') Star
+
+    ul.list-unstyled.row
+      for theme in themes
+        li.col-lg-6.mb-4
+          div.rounded.overflow-hidden.border.shadow-sm
+            a(href=`${theme.slug}/index.pug`)
+              img(src=`https://bootstrap-themes.nyc3.digitaloceanspaces.com/screenshots/${theme.slug}.png`)
+  include ./footer
+  script(src="index.js")
+  script(async defer src="https://buttons.github.io/buttons.js")

@@ -1,0 +1,38 @@
+@import '../after';
+
+// ALERT
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    border: 1px solid $value;
+    border-left-width: 5px;
+  }
+}
+
+// BADGE
+.badge {
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+// BUTTON
+.btn {
+  letter-spacing: 0.025rem;
+}
+
+$box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.06);
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @if $color != 'light' {
+      color: $value;
+    }
+    background: theme-color-level($color, -11);
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+// ALL
+.card,
+.btn,
+.alert {
+  box-shadow: $box-shadow;
+}

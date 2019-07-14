@@ -1,0 +1,44 @@
+mixin table(title, klass, theadClass)
+  .col-md-6.mb-3
+    .mb-2.font-weight-bold.text-center= title
+    .snippet
+      table.table(class=klass)
+        thead(class=theadClass)
+          tr
+            th(scope="col") #
+            th(scope="col") Name
+            th(scope="col") Stars
+            th(scope="col") Forks
+        tbody
+          tr
+            th(scope="row") 1
+            td Bootstrap
+            td 135k
+            td 66k
+          tr
+            th(scope="row") 2
+            td Semantic UI
+            td 46k
+            td 5k
+          tr
+            th(scope="row") 3
+            td Bulma
+            td 36k
+            td 3k
+          tr
+            th(scope="row") 4
+            td Foundation
+            td 28k
+            td 6k
+
+.row
+  +table('Plain', 'bg-white text-dark', '')
+  +table('Dark', 'table-dark', '')
+  +table('Striped', 'bg-white text-dark table-striped', '')
+  +table('Striped + Dark', 'table-striped table-dark', '')
+  +table('Bordered', 'bg-white text-dark table-bordered', '')
+  +table('Bordered + Dark', 'table-bordered table-dark', '')
+  +table('Hover', 'bg-white text-dark table-hover', '')
+  +table('Hover + Dark', 'table-hover table-dark', '')
+  +table('Small', 'bg-white text-dark table-sm', '')
+  +table('Small + Dark', 'table-sm table-dark', '')

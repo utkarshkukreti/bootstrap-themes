@@ -1,0 +1,47 @@
+.d-flex.flex-wrap.mb-2.justify-content-center.snippet
+  for color in colors
+    if isAlmostInvisibleOnBackground(color)
+      - continue
+    button.btn(class=`btn-${color.class}`).mr-3.mb-3= color.name
+
+.d-flex.flex-wrap.mb-2.justify-content-center.snippet
+  for color in colors
+    if isAlmostInvisibleOnBackground(color)
+      - continue
+    button.btn(class=`btn-outline-${color.class}`).mr-3.mb-3= color.name
+
+.d-flex.flex-wrap.mb-2.justify-content-center.snippet
+  for color in colors
+    if isAlmostInvisibleOnBackground(color)
+      - continue
+    .btn-group(role='group' aria-label='Menu').mr-3.mb-3
+      button.btn(class=`btn-${color.class}` type='button') File
+      button.btn(class=`btn-${color.class}` type='button') Edit
+      button.btn(class=`btn-${color.class}` type='button') View
+      button.btn(class=`btn-${color.class}` type='button') History
+      button.btn(class=`btn-${color.class}` type='button') Help
+for color in colors
+  if isAlmostInvisibleOnBackground(color)
+    - continue
+  .d-flex.flex-wrap.justify-content-center.mb-1.snippet
+    .mr-3.mb-2.btn-group.btn-group-toggle(data-toggle='buttons')
+      label.btn(class=`btn-${color.class}`).active
+        input(type='radio' name='options', checked)
+        |  Radio
+      label.btn(class=`btn-${color.class}`)
+        input(type='radio' name='options')
+        |  Radio
+      label.btn(class=`btn-${color.class}`)
+        input(type='radio' name='options')
+        |  Radio
+
+    .mb-2.btn-group.btn-group-toggle(data-toggle='buttons')
+      label.btn(class=`btn-${color.class}`).active
+        input(type='checkbox' name='options', checked)
+        |  Checkbox
+      label.btn(class=`btn-${color.class}`)
+        input(type='checkbox' name='options')
+        |  Checkbox
+      label.btn(class=`btn-${color.class}`)
+        input(type='checkbox' name='options')
+        |  Checkbox

@@ -1,0 +1,92 @@
+div
+  - const cssUrl = `https://cdn.jsdelivr.net/npm/bootstrap-themes@^1.0.0/dist/${config.slug}/index.min.css`;
+  - const linkHtml = `<link rel="stylesheet" href="${cssUrl}">`;
+  - const inputStyle = config.isBackgroundLight ? '' : 'border: none;';
+  .input-group.mb-2
+    .input-group-prepend
+      button.btn.btn-secondary(tabindex=-1) CDN URL
+    input.form-control.text-monospace(readonly value=cssUrl style=inputStyle)
+    .input-group-append
+      button.btn.btn-primary(data-toggle="copy" data-text=cssUrl) Copy
+  .input-group.mb-2
+    .input-group-prepend
+      button.btn.btn-secondary(tabindex=-1) HTML
+    input.form-control.text-monospace(readonly value=linkHtml style=inputStyle)
+    .input-group-append
+      button.btn.btn-primary(data-toggle="copy" data-text=linkHtml) Copy
+  div.d-flex.justify-content-center.mb-2
+    button.btn.btn-primary.mr-2(data-toggle="collapse" data-target="#other-ways") Other Ways To Download &darr;
+    button.btn.btn-primary(data-toggle="collapse" data-target="#customize") Customize &darr;
+  #other-ways.collapse.bg-white.rounded.border.shadow-sm.text-dark
+    .p-3
+      .h4.text-center SCSS from NPM
+      p.
+        First, install the <code>bootstrap</code> and <code>bootstrap-themes</code>
+        NPM packages into your Node.js project:
+      .input-group.mb-3
+        - const shellCommand = `npm install --save bootstrap bootstrap-themes`
+        .input-group-prepend
+          button.btn.btn-secondary(tabindex=-1) Shell
+        input.form-control.text-monospace(readonly value=shellCommand)
+        .input-group-append
+          button.btn.btn-primary(data-toggle="copy" data-text=shellCommand) Copy
+      p.
+        Now add the following to your .scss file (adjust the path to
+        <code>node_modules/</code> if your SCSS file is not in the root
+        directory, e.g. <code>../node_modules/</code>):
+      .input-group.mb-3
+        -
+          const code = `
+          // Override variables here.
+          @import "node_modules/bootstrap-themes/src/${config.slug}/variables";
+          @import "node_modules/bootstrap/scss/bootstrap";
+          @import "node_modules/bootstrap-themes/src/${config.slug}/overrides";
+          // Add additional styles here.`;
+        .input-group-prepend
+          button.btn.btn-secondary.d-flex.align-items-center(tabindex=-1) SCSS
+        textarea.form-control.text-monospace(readonly rows=code.split('\n').length - 1 style="white-space: pre;")= code
+        .input-group-append
+          button.btn.btn-primary.d-flex.align-items-center(data-toggle="copy" data-text=code)
+            | Copy
+      .h4.text-center Source Code
+      p.mb-0.
+        Download the complete source code of all our themes from
+         <a href="https://github.com/utkarshkukreti/bootstrap-themes">our GitHub Repository</a>.
+  #customize.collapse.bg-white.rounded.border.shadow-sm.text-dark
+    mixin code(label, code)
+      .input-group.mb-3
+        .input-group-prepend
+          button.btn.btn-secondary.d-flex.align-items-center(tabindex=-1)= label
+        textarea.form-control.text-monospace(readonly rows=code.split('\n').length - 1 style="white-space: pre;")= code
+        .input-group-append
+          button.btn.btn-primary.d-flex.align-items-center(data-toggle="copy" data-text=code)
+            | Copy
+    .p-3
+      .h4.text-center Using SCSS
+      p.
+        Refer to the <a href="https://getbootstrap.com/docs/4.3/getting-started/theming/">Theming Bootstrap Guide</a>
+        on how to customize Bootstrap using SCSS Variables.
+      p.
+        Customizing our themes is similar -- just make sure to change the value
+        of the variables before importing <code>#{config.slug}/variables</code>.
+      p.
+        For example, here's how you can change the font to Fira Sans,
+        the blue color value, the secondary color value, and the body background:
+      -
+        const scssCode = `
+        // Override variables here.
+        $web-font-url: "https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap";
+        $web-font-name: "Fira Sans";
+        $blue: #1e90ff;
+        $primary: #9b42a0;
+        $body-bg: #f8f8f8;
+        @import "node_modules/bootstrap-themes/src/${config.slug}/variables";
+        @import "node_modules/bootstrap/scss/bootstrap";
+        @import "node_modules/bootstrap-themes/src/${config.slug}/overrides";
+        // Add additional styles here.`;
+      +code("SCSS", scssCode)
+      p.mb-0.
+        For a list of all the variables in our theme, refer to
+        <a href="https://github.com/utkarshkukreti/bootstrap-themes/blob/master/src/#{config.slug}/_variables.scss">#{config.slug}/_variables.scss</a>
+        and
+        <a href="https://github.com/utkarshkukreti/bootstrap-themes/blob/master/src/#{config.slug}/_overrides.scss">#{config.slug}/_overrides.scss</a>.

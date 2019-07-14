@@ -1,0 +1,32 @@
+$web-font-url: 'https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap' !default;
+$web-font: 'Work Sans' !default;
+
+// UI
+$body-bg: #f0f3f6 !default;
+$body-color: #212529 !default;
+$font-size-base: (14/16) * 1rem !default;
+$font-family-sans-serif: $web-font, sans-serif !default;
+
+$border-radius: 0.15rem !default;
+
+// COLORS
+$blue: #078fee !default;
+$green: #30b643 !default;
+$red: #ed534e !default;
+$orange: #f57400 !default;
+$purple: #815de6 !default;
+
+$secondary: #404346 !default;
+$info: $purple !default;
+$warning: $orange !default;
+
+// ALERT
+$alert-padding-x: 1rem !default;
+$alert-border-level: -5 !default;
+
+// BADGE
+$badge-padding-y: 0.5em !default;
+$badge-padding-x: 0.75em !default;
+$badge-font-weight: normal !default;
+
+@import '../before';

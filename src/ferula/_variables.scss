@@ -1,0 +1,32 @@
+$web-font-url: 'https://fonts.googleapis.com/css?family=Asap:400,700&display=swap' !default;
+$web-font: Asap !default;
+
+// UI
+$body-bg: #fefade !default;
+$font-size-base: (14/16) * 1rem !default;
+$font-family-sans-serif: $web-font, sans-serif !default;
+
+$btn-border-radius: 0.5rem !default;
+
+// COLORS
+$blue: #078fee !default;
+$green: #30b643 !default;
+$red: #ed534e !default;
+$orange: #f57400 !default;
+$purple: #815de6 !default;
+$magenta: #9b42a0 !default;
+
+$primary: $magenta !default;
+$secondary: #404346 !default;
+$info: $purple !default;
+$warning: $orange !default;
+
+// ALERT
+$alert-padding-x: 1rem !default;
+
+// BADGE
+$badge-padding-y: 0.5em !default;
+$badge-padding-x: 0.75em !default;
+$badge-font-weight: normal !default;
+
+@import '../before';

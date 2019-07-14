@@ -1,0 +1,78 @@
+extends ../layout
+
+block head
+  title #{config.name} @ Bootstrap-Themes.com
+  link(rel="stylesheet" href=`../${config.slug}/index.scss`)
+  link(rel="stylesheet" href="../_/index.scss")
+  link(rel="stylesheet" href="../../node_modules/highlight.js/styles/atom-one-light.css")
+
+block body
+  -
+    const colors = [
+      {name: 'Primary', class: 'primary'},
+      {name: 'Secondary', class: 'secondary'},
+      {name: 'Success', class: 'success'},
+      {name: 'Info', class: 'info'},
+      {name: 'Warning', class: 'warning'},
+      {name: 'Danger', class: 'danger'},
+      {name: 'Dark', class: 'dark'},
+      {name: 'Light', class: 'light'},
+    ];
+    const isLight = color => (
+      color.name === 'Light' ||
+      (color.name === 'Primary' && config.isPrimaryLight) ||
+      (color.name === 'Secondary' && config.isSecondaryLight)
+    );
+    const isAlmostInvisibleOnBackground = color => (
+      (color.name === 'Light' && config.isBackgroundLight) ||
+      (color.name === 'Dark' && !config.isBackgroundLight)
+    );
+
+  include ../nav
+
+  .container.mb-3
+    h1.text-center= config.name
+    .h6.text-muted.text-center.mb-4= config.tagline
+
+    mixin h
+      h2.h3.my-4.text-center
+        block
+
+    include ./_use
+
+    +h Button
+    include ./button
+    +h Dropdown
+    include ./dropdown
+    +h Badge
+    include ./badge
+    +h Alert
+    include ./alert
+    +h Form
+    include ./form
+    +h Navbar
+    include ./navbar
+    +h Table
+    include ./table
+    +h Breadcrumb
+    include ./breadcrumb
+    +h Pagination
+    include ./pagination
+    +h Progress
+    include ./progress
+    +h Card
+    include ./card
+  #code.modal.fade(tabindex='-1', role='dialog')
+    .modal-dialog.modal-xl.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-body
+          pre
+            code.html.rounded
+        .modal-footer
+          button.btn.btn-secondary(data-dismiss='modal') Close
+          button.copy.btn.btn-primary(data-toggle="copy") Copy
+
+  include ../footer
+
+  script!= `window.config = ${JSON.stringify(config)};`
+  script(src="../_/index.js")

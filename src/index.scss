@@ -1,0 +1,17 @@
+$web-font-url: 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap';
+
+// UI
+$body-bg: #f5f8fb;
+$font-size-base: (14/16) * 1rem;
+$font-family-sans-serif: 'IBM Plex Sans', sans-serif;
+
+// COLORS
+$blue: #078fee;
+
+@import './before';
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import './after';
+
+img {
+  max-width: 100%;
+}

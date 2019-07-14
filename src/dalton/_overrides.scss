@@ -1,0 +1,23 @@
+@import '../after';
+
+// ALERT
+.alert-light {
+  color: $dark;
+}
+
+// BADGE
+.badge {
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+// BUTTON
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// TABLE
+.table-hover tbody tr:hover {
+  color: inherit;
+}

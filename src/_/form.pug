@@ -1,0 +1,201 @@
+mixin box
+  .snippet
+    .bg-white.text-dark.border.rounded-sm.p-4.mb-3
+        block
+
+.row
+  .col-md-6
+    +box
+      form
+        .form-group
+          label(for='form-1-email') Email address
+          input#form-1-email.form-control(type='email', aria-describedby='form-1-email-help', placeholder='Enter email')
+          small#form-1-email-help.form-text.text-muted We'll never share your email with anyone else.
+        .form-group
+          label(for='form-1-password') Password
+          input#form-1-password.form-control(type='password', placeholder='Password')
+        .form-group.form-check
+          input#form-1-tos.form-check-input(type='checkbox')
+          label.form-check-label(for='form-1-tos') I agree to the Terms of Service
+        button.btn.btn-primary(type='submit') Sign up
+      .mb-4.mb-md-0
+
+  .col-md-6
+    +box
+      form
+        .form-group
+          label(for='form-2-email') Email address
+          input#form-2-email.form-control(type='email', placeholder='Enter email')
+        .form-group
+          label(for='form-2-password') Password
+          input#form-2-password.form-control(type='password',, aria-describedby='form-2-password-help' placeholder='Password')
+          small#form-2-password-help.form-text.text-muted Remember: The password is case-sensitive.
+        .form-group.form-check
+          input#form-2-tos.form-check-input(type='checkbox')
+          label.form-check-label(for='form-2-tos') Remember Me
+        button.btn.btn-primary(type='submit') Sign In
+
++box
+  form
+    .form-row
+      .form-group.col-md-6
+        label(for='form-3-email') Email
+        input#form-3-email.form-control(type='email', placeholder='Email')
+      .form-group.col-md-6
+        label(for='form-3-password') Password
+        input#form-3-password.form-control(type='password', placeholder='Password')
+    .form-group
+      label(for='form-3-address') Address
+      input#form-3-address.form-control(type='text', placeholder='1234 Main St')
+    .form-group
+      label(for='form-3-address-2') Address 2
+      input#form-3-address-2.form-control(type='text', placeholder='Apartment, Studio, or Floor')
+    .form-row
+      .form-group.col-md-6
+        label(for='form-3-city') City
+        input#form-3-city.form-control(type='text', placeholder='City')
+      .form-group.col-md-4
+        label(for='form-3-state') State
+        select#form-3-state.form-control
+          option(selected='') Choose...
+          option ...
+      .form-group.col-md-2
+        label(for='form-3-zip') Zip
+        input#form-3-zip.form-control(type='text', placeholder='Zip')
+    .form-group
+      .form-check
+        input#form-3-tos.form-check-input(type='checkbox')
+        label.form-check-label(for='form-3-tos')
+          | I agree to the Terms of Service
+    button.btn.btn-primary(type='submit') Sign Up
+
++box
+  form
+    .form-row
+      .col-md-4.mb-3
+        label(for='form-4-first-name') First name
+        input#form-4-first-name.form-control.is-valid(type='text', placeholder='First name', value='Jane', required='')
+        .valid-feedback
+          | Looks good!
+      .col-md-4.mb-3
+        label(for='form-4-last-name') Last name
+        input#form-4-last-name.form-control.is-valid(type='text', placeholder='Last name', value='Doe', required='')
+        .valid-feedback
+          | Looks good!
+      .col-md-4.mb-3
+        label(for='form-4-username') Username
+        .input-group
+          .input-group-prepend
+            span.input-group-text @
+          input#form-4-username.form-control.is-invalid(type='text', value='janedoe', required='')
+          .invalid-feedback
+            | This username is already taken!
+    .form-row
+      .col-md-4.mb-3
+        label(for='form-4-city') City
+        input#form-4-city.form-control.is-invalid(type='text', placeholder='City', required='')
+        .invalid-feedback
+          | Please provide a valid city.
+      .col-md-4.mb-3
+        label(for='form-4-state') State
+        input#form-4-state.form-control.is-invalid(type='text', placeholder='State', required='')
+        .invalid-feedback
+          | Please provide a valid state.
+      .col-md-4.mb-3
+        label(for='form-4-zip') Zip
+        input#form-4-zip.form-control.is-invalid(type='text', placeholder='Zip', required='')
+        .invalid-feedback
+          | Please provide a valid zip.
+    .form-group
+      .form-check
+        input#form-4-tos.form-check-input.is-invalid(type='checkbox', value='', required='')
+        label.form-check-label(for='form-4-tos')
+          | I Agree to the Terms of Service
+        .invalid-feedback
+          | You must agree before submitting.
+    button.btn.btn-primary(type='submit') Sign Up
+
++box
+  .input-group.mb-3
+    .input-group-prepend
+      span#form-5-at.input-group-text @
+    input.form-control(type='text', placeholder='Username', aria-label='Username', aria-describedby='form-5-at')
+  .input-group.mb-3
+    input.form-control(type='text', placeholder="Recipient's username", aria-label="Recipient's username", aria-describedby='form-5-email-domain')
+    .input-group-append
+      span#form-5-email-domain.input-group-text @example.com
+  label(for='form-5-url') Your vanity URL
+  .input-group.mb-3
+    .input-group-prepend
+      span#form-5-url-prefix.input-group-text https://example.com/users/
+    input#form-5-url.form-control(type='text', aria-describedby='form-5-url-prefix')
+  .input-group.mb-3
+    .input-group-prepend
+      span.input-group-text $
+    input.form-control(type='text', aria-label='Amount (to the nearest dollar)')
+    .input-group-append
+      span.input-group-text .00
+  .input-group
+    .input-group-prepend
+      span.input-group-text Notes
+    textarea.form-control(aria-label='Notes' rows=3)
+
++box
+  .row
+    .col-md-4
+      .custom-control.custom-checkbox
+        input#custom-checkbox-1.custom-control-input(type='checkbox')
+        label.custom-control-label(for='custom-checkbox-1') A Custom Checkbox
+
+      .custom-control.custom-checkbox
+        input#custom-checkbox-2.custom-control-input(type='checkbox')
+        label.custom-control-label(for='custom-checkbox-2') A Custom Checkbox 2
+
+      .custom-control.custom-checkbox.mb-3
+        input#custom-checkbox-3.custom-control-input(type='checkbox', disabled)
+        label.custom-control-label(for='custom-checkbox-3') A Disabled Custom Checkbox
+
+    .col-md-4
+      .custom-control.custom-radio
+        input#custom-radio-1.custom-control-input(type='radio', name='customRadio')
+        label.custom-control-label(for='custom-radio-1') A Custom Radio
+
+      .custom-control.custom-radio
+        input#custom-radio-2.custom-control-input(type='radio', name='customRadio')
+        label.custom-control-label(for='custom-radio-2') A Custom Radio 2
+
+      .custom-control.custom-radio.mb-3
+        input#custom-radio-3.custom-control-input(type='radio', name='customRadio', disabled)
+        label.custom-control-label(for='custom-radio-3') A Disabled Custom Radio
+
+    .col-md-4
+      .custom-control.custom-switch
+        input#custom-switch-1.custom-control-input(type='checkbox')
+        label.custom-control-label(for='custom-switch-1') A Custom Switch
+        
+      .custom-control.custom-switch
+        input#custom-switch-2.custom-control-input(type='checkbox')
+        label.custom-control-label(for='custom-switch-2') A Custom Switch 2
+
+      .custom-control.custom-switch.mb-3
+        input#custom-switch-3.custom-control-input(type='checkbox', disabled='')
+        label.custom-control-label(for='custom-switch-3') A Disabled Custom Switch
+
+  .row
+    .col-md-4
+      select.custom-select.mb-3
+        option(selected='') A Custom Select
+        option(value='1') One
+        option(value='2') Two
+        option(value='3') Three
+
+    .col-md-4
+      select.custom-select(multiple='').mb-3.mb-md-0
+        option(selected='') A Custom Multiple Select
+        option(value='1') One
+        option(value='2') Two
+        option(value='3') Three
+
+    .col-md-4
+      label(for='custom-range-1') A Custom Range
+      input#custom-range-1.custom-range(type='range')

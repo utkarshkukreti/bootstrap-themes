@@ -1,0 +1,40 @@
+mixin alert(klass)
+  .snippet
+    .alert(class=`alert-${klass}`).fade.in.alert-dismissible.show
+      button.close(type='button' data-dismiss='alert' aria-label='Close')
+        span(aria-hidden='true') &times;
+      block
+
++alert("success")
+  strong Success!
+  |  This alert box indicates a successful or positive action.
+
++alert("info")
+  strong Info!
+  |  This alert box indicates a neutral informative change or action.
+
++alert("warning")
+  strong Warning!
+  |  This alert box indicates a warning that might need attention.
+
++alert("danger")
+  strong Danger!
+  |  This alert box indicates a dangerous or potentially negative action.
+
++alert("primary")
+  strong Primary!
+  |  This alert box indicates an important action.
+
++alert("secondary")
+  strong Secondary!
+  |  This alert box indicates a less important action.
+
+if config.isBackgroundLight
+  +alert("dark")
+    strong Dark!
+    |  This alert box is Dark!
+
+if !config.isBackgroundLight
+  +alert("light")
+    strong Light!
+    |  This alert box is Light!

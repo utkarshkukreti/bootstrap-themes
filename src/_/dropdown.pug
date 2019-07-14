@@ -1,0 +1,25 @@
+mixin dropped(klass = '')
+  .dropdown-menu(class=klass)
+    a.dropdown-item(href='#') My Profile
+    a.dropdown-item(href='#') My Settings
+    .dropdown-divider
+    a.dropdown-item(href='#') Logout
+
+.d-flex.flex-wrap.mb-2.justify-content-center.snippet
+  for color in colors
+    if isAlmostInvisibleOnBackground(color)
+      - continue
+    .btn-group.mr-3.mb-3
+      button(class=`btn btn-${color.class} dropdown-toggle` type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+        | Jane Doe
+      +dropped
+
+.d-flex.flex-wrap.mb-2.justify-content-center.snippet
+  for color in colors
+    if isAlmostInvisibleOnBackground(color)
+      - continue
+    .btn-group.mr-3.mb-3
+      button.btn(class=`btn-${color.class}` type='button') Jane Doe
+      button(class=`btn btn-${color.class} dropdown-toggle dropdown-toggle-split` type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+        span.sr-only Toggle Dropdown
+      +dropped('dropdown-menu-right')

@@ -1,0 +1,5 @@
+.d-flex.flex-wrap.mb-2.justify-content-center.snippet
+  for color in colors
+    if isAlmostInvisibleOnBackground(color)
+      - continue
+    .badge(class=`badge-${color.class}`).mr-3.mb-2= color.name

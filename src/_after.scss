@@ -1,0 +1,18 @@
+// Import $web-font-url if it's set.
+@if $web-font-url {
+  @import url($web-font-url);
+}
+
+// Enable antialiasing. Defaults to true.
+$enable-antialiasing: true !default;
+@if $enable-antialiasing {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+// Fix vertical position of the shape.
+.dropdown-toggle::after {
+  vertical-align: 0.15em;
+}

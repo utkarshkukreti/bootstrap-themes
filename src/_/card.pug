@@ -1,0 +1,15 @@
+mixin card(title, klass)
+  .col-sm-6
+    .snippet
+      .card.text-center(class=klass).mb-3
+        .card-header #{title} Card
+        .card-body
+          h5.card-title Special title treatment
+          p.card-text With supporting text below as a natural lead-in to additional content.
+          a.btn(class=title === 'Default' || title==='Light' ? 'btn-primary' : 'btn-light' href='#') Do Something
+        .card-footer Just Now
+
+.row
+  +card('Default', 'text-dark')
+  for color in colors
+    +card(color.name, `bg-${color.class} text-${isLight(color) ? 'dark' : 'white'}`)

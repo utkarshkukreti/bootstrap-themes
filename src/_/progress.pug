@@ -1,0 +1,18 @@
+-
+  const progress = index => [75, 25, 50, 100][index % 4]
+
+.h5.text-center Plain
+.snippet
+  for color, index in colors
+    if color.name === 'Light'
+      - continue
+    .progress.mb-2
+      .progress-bar(class=`bg-${color.class}` role='progressbar', style=`width: ${progress(index)}%`, aria-valuenow=`${progress(index)}`, aria-valuemin='0', aria-valuemax='100')
+
+.h5.text-center.mt-3 With Label
+.snippet
+  for color, index in colors
+    if color.name === 'Light'
+      - continue
+    .progress.mb-2
+      .progress-bar(class=`bg-${color.class} text-${isLight(color) ? 'dark' : 'white'}` role='progressbar', style=`width: ${progress(index)}%;`, aria-valuenow=`${progress(index)}`, aria-valuemin='0', aria-valuemax='100') #{progress(index)}%

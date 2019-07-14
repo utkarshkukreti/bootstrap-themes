@@ -1,0 +1,15 @@
+@import '../after';
+
+// ALERT
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    border: 1px solid $value;
+    border-left-width: 5px;
+  }
+}
+
+// BADGE
+.badge {
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}

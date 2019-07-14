@@ -1,0 +1,40 @@
+$web-font-url: 'https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap' !default;
+$web-font: 'PT Sans' !default;
+
+// UI
+$body-bg: #4e406f !default;
+$body-color: #f7f7f7 !default;
+$font-size-base: (15/16) * 1rem !default;
+$font-family-sans-serif: $web-font, sans-serif !default;
+
+// COLORS
+$blue: #078fee !default;
+$green: #30b643 !default;
+$red: #ed534e !default;
+$orange: #f57400 !default;
+$purple: #815de6 !default;
+$magenta: #9b42a0 !default;
+
+$primary: $purple !default;
+$secondary: $blue !default;
+$info: $magenta !default;
+$warning: $orange !default;
+
+$text-muted: rgba(255, 255, 255, 0.5) !default;
+
+// ALERT
+$alert-bg-level: 0 !default;
+$alert-border-level: 0 !default;
+$alert-color-level: -12 !default;
+
+// BADGE
+$badge-padding-y: 0.5em !default;
+$badge-padding-x: 0.75em !default;
+$badge-font-weight: normal !default;
+
+// BUTTON
+$btn-font-size: 0.75rem !default;
+$btn-font-weight: bold !default;
+$btn-border-radius: 1rem !default;
+
+@import '../before';
