@@ -19,8 +19,8 @@
     "start": "parcel -d .cache/dev src/index.pug",
     "build": "yarn clean && yarn build:rake && yarn build:preview",
     "build:rake": "rake",
-    "build:preview": "parcel build --no-cache --no-source-maps -d dist/prod src/index.pug",
-    "deploy": "yarn build && netlifyctl deploy -P dist/prod",
+    "build:preview": "parcel build --no-cache --no-source-maps -d dist src/index.pug",
+    "deploy": "yarn build && netlifyctl deploy -P dist",
     "clean": "rm -rf dist"
   },
   "peerDependencies": {
