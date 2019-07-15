@@ -4417,6 +4417,13 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
+postcss-banner@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-banner/-/postcss-banner-3.0.1.tgz#130ec592cefd3f5b52bc54f7f01c8881603c22fc"
+  integrity sha512-uHZoJ5VmnqHAMGHJU8KJHrkLuynp72N9PPn1T4f0iVBDoApsOkr1OmY4Mk0t2e5lNfrDgOUNEBHj8RbYa8zvbw==
+  dependencies:
+    postcss "^7.0.14"
+
 postcss-calc@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-7.0.1.tgz#36d77bab023b0ecbb9789d84dcb23c4941145436"
@@ -4782,7 +4789,7 @@ postcss@^6.0.1:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.16, postcss@^7.0.5, postcss@^7.0.7:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.5, postcss@^7.0.7:
   version "7.0.17"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.17.tgz#4da1bdff5322d4a0acaab4d87f3e782436bad31f"
   integrity sha512-546ZowA+KZ3OasvQZHsbuEpysvwTZNGJv9EfyCQdsIDltPSWHAeTQ5fQy/Npi2ZDtLI3zs7Ps/p6wThErhm9fQ==
