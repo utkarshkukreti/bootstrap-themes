@@ -60,7 +60,7 @@ const $code = $('#code');
 $('.snippet').each(function() {
   const html = prettify($(this).html());
   $(`
-    <div class="toggle">
+    <div class="show">
       <svg width="16" height="16" fill="${
         window.config.isBackgroundLight ? 'var(--dark)' : 'var(--light)'
       }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
