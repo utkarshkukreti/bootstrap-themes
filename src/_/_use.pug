@@ -3,8 +3,8 @@
   - const linkHtml = `<link rel="stylesheet" href="${cssUrl}">`;
   - const inputStyle = config.isBackgroundLight ? '' : 'border: none;';
   .d-flex.justify-content-center.mb-2
-    a.btn.btn-primary.mr-1(download data-href="index.css" href="#") Download CSS &rarr;
-    a.btn.btn-primary(download data-href="index.min.css" href="#") Download Minified CSS &rarr;
+    a.btn.btn-primary.mr-1(download=`${config.slug}.css` data-href="index.css" href="#") Download CSS &rarr;
+    a.btn.btn-primary(download=`${config.slug}.min.css` data-href="index.min.css" href="#") Download Minified CSS &rarr;
   .input-group.mb-2
     .input-group-prepend
       button.btn.btn-secondary(tabindex=-1) CDN URL
