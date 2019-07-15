@@ -2,7 +2,7 @@
   "name": "bootstrap-themes",
   "version": "1.0.1",
   "files": [
-    "/dist/**/*.css",
+    "/dist/**/index{,.min}.css",
     "!/dist/{dev,prod}/**/*",
     "/src/**/*.scss",
     "!/src/_/*",
