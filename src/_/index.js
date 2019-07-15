@@ -75,3 +75,8 @@ $('.snippet').each(function() {
     })
     .appendTo(this);
 });
+
+$('a[data-href]').each(function() {
+  const $this = $(this);
+  $this.attr('href', $this.data('href'));
+});
