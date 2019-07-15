@@ -75,8 +75,3 @@ $('.snippet').each(function() {
     })
     .appendTo(this);
 });
-
-// https://stackoverflow.com/a/54759365
-$('.collapse').on('show.bs.collapse', function() {
-  $('.collapse.show').collapse('hide');
-});
