@@ -30,7 +30,7 @@
     "bootstrap": "^4.3.1",
     "clipboard-polyfill": "^2.8.1",
     "cssnano": "^4.1.10",
-    "highlight.js": "^9.15.8",
+    "highlight.js": "^10.4.1",
     "jquery": "^3.4.1",
     "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.3",
